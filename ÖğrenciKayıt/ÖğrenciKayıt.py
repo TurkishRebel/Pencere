@@ -67,7 +67,7 @@ class Pencere(QtWidgets.QWidget):
         self.show()
 
     def fonk(self):#Kayıt işlemi
-      if self.gir.text() != "" or self.gir2.text() != ""or self.gir3.text() != "" or self.gir4.text() != "":
+      if self.gir.text() != "" and self.gir2.text() != ""and self.gir3.text() != "" and self.gir4.text() != "":
         cursor.execute("Insert into ogr Values(?,?,?,?)",(self.gir.text(), self.gir2.text(), self.gir3.text(), self.gir4.text()))
         con.commit()
         self.yazı_alanı.setText("Kayıt Başarılı!...")
